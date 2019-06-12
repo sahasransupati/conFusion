@@ -10,10 +10,10 @@
         <h4>Links</h4>
         <mat-list>
           <button mat-button (click) = "goBack()">BACK</button>
-          <mat-list-item><a mat-button>Home</a></mat-list-item>
-          <mat-list-item><a mat-button>About</a></mat-list-item>
-          <mat-list-item><a mat-button>Menu</a></mat-list-item>
-          <mat-list-item><a mat-button>Contact</a></mat-list-item>
+          <mat-list-item><a mat-button routerLink= "/home" routerLinkActive="active">Home</a></mat-list-item>
+          <mat-list-item><a mat-button routerLink= "/aboutus" routerLinkActive="active">About</a></mat-list-item>
+          <mat-list-item><a mat-button routerLink= "/menu" routerLinkActive="active">Menu</a></mat-list-item>
+          <mat-list-item><a mat-button routerLink= "/contactus" routerLinkActive="active">Contact</a></mat-list-item>
         </mat-list>
       </div>
       <div fxFlex="55">
