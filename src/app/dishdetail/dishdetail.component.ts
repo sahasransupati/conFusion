@@ -54,7 +54,7 @@ export class DishdetailComponent implements OnInit {
         'required':      'Author Name is required.',
         'minlength':     'First Name must be at least 2 characters long.'
       },
-      'comment': {
+        'comment': {
         'required':      'Comment is required.',
         'minlength':     'Comment must be at least 1 character long.'
       }
@@ -64,11 +64,13 @@ export class DishdetailComponent implements OnInit {
       private route: ActivatedRoute,
       private location: Location,
       private fb: FormBuilder,
-      @Inject('baseURL') private baseURL) {
+      @Inject('BaseURL') private BaseURL)
+      {
         this.createForm();
-     }
+      }
   
-    ngOnInit() {
+    
+     ngOnInit() {
       this.dishservice.getDishIds()
       .subscribe(dishIds => this.dishIds = dishIds, errmess => this.errMess = <any>errmess);
       this.route.params
@@ -145,3 +147,4 @@ export class DishdetailComponent implements OnInit {
 
   }
 
+//     @Inject('baseURL') private baseURL)

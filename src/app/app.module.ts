@@ -20,11 +20,12 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSliderModule } from '@angular/material/slider';
 import { ReactiveFormsModule } from '@angular/forms'; 
+import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
 
-import { baseURL } from './shared/baseurl';
+import  { baseURL } from './shared/baseurl';
 
 import 'hammerjs';
 import { MenuComponent } from './menu/menu.component';
@@ -65,6 +66,7 @@ import { HighlightDirective } from './directives/highlight.directive';
     MatCheckboxModule,
     FlexLayoutModule,
     AppRoutingModule,
+    HttpModule,
     HttpClientModule,
     MatListModule,
     MatGridListModule,
@@ -82,10 +84,14 @@ import { HighlightDirective } from './directives/highlight.directive';
              PromotionService,
              LeaderService,
              ProcessHTTPMsgService,
-            {provide : 'BaseURL' , useValue: baseURL}],
+             {provide: 'BaseURL', useValue: baseURL}
+            ],
+
   entryComponents: [
     LoginComponent
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+//            {provide : 'BaseURL' , useValue: baseURL}],
