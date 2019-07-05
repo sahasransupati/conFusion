@@ -22,7 +22,6 @@ import { MatSliderModule } from '@angular/material/slider';
 import { ReactiveFormsModule } from '@angular/forms'; 
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
-
 import { AppRoutingModule } from './app-routing/app-routing.module';
 
 import  { baseURL } from './shared/baseurl';
@@ -39,6 +38,7 @@ import { ContactComponent } from './contact/contact.component';
 import { DishService } from './services/dish.service';
 import { PromotionService } from './services/promotion.service';
 import { LeaderService } from './services/leader.service';
+import { FeedbackService } from './services/feedback.service';
 import { ProcessHTTPMsgService } from './services/process-httpmsg.service';
 import { LoginComponent } from './login/login.component';
 import { HighlightDirective } from './directives/highlight.directive';
@@ -83,6 +83,7 @@ import { HighlightDirective } from './directives/highlight.directive';
   providers: [DishService,
              PromotionService,
              LeaderService,
+             FeedbackService,
              ProcessHTTPMsgService,
              {provide: 'BaseURL', useValue: baseURL}
             ],
